@@ -3,6 +3,7 @@ import './Post.css';
 import Comment from '../../Img/comment.png';
 import Share from '../../Img/share.png';
 import Like from '../../Img/like.png';
+import Location from '../../Img/location.png';
 import Notlike from '../../Img/notlike.png';
 import { useSelector } from 'react-redux';
 import { likePost } from '../../api/PostRequest';
@@ -27,10 +28,16 @@ const Post = ({ data }) => {
 
       <img src={data.image ? process.env.REACT_APP_PUBLIC_FOLDER + data.image : " "} alt="" />
 
-      <div className="postReact">
-        <img src={liked ? Like : Notlike} alt="" style={{ cursor: "pointer" }} onClick={handleLike} />
-        <img src={Comment} alt="" />
-        <img src={Share} alt="" />
+      <div className="postReactContainer">
+        <div className="postReact">
+          <img src={liked ? Like : Notlike} alt="" style={{ cursor: "pointer" }} onClick={handleLike} />
+          <img src={Comment} alt="" />
+          <img src={Share} alt="" />
+        </div>
+        <div className="postReact">
+          <img width={30} src={Location} alt="" />
+          <h3 className='location'>{data.location}</h3>
+        </div>
       </div>
 
       <span style={{ color: "var(--gray)", fontSize: '14px' }}>{likes} likes</span>
