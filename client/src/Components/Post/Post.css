@@ -33,3 +33,25 @@
 .location{
     color :blueviolet;
 }
+
+/* Add these styles to your Post.css file */
+
+.emergency-post {
+    border: 2px solid #ff3333;
+    box-shadow: 0 0 8px rgba(255, 51, 51, 0.5);
+    position: relative;
+  }
+  
+  .emergency-banner {
+    background-color: #ff3333;
+    color: white;
+    padding: 4px 8px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .emergency-text {
+    letter-spacing: 1px;
+    font-size: 14px;
+  }
